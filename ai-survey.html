@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)file:///C:/Users/Sanjar/Downloads/ai-survey-v4_4.html -->
+<!-- saved from url=(0051)file:///C:/Users/Sanjar/Downloads/ai-survey-v5.html -->
 <html lang="uz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -381,7 +381,7 @@ const SEG_DESC={
   'AI Resistant':"AI vositalaridan hozircha kam yoki umuman foydalanmayapsiz. Alohida motivatsion yondashuv va bosqichma-bosqich o'qitish tavsiya etiladi."
 };
 
-let curQ=0,ans={},empInfo={};
+let curQ=0,ans={},ansOrder={},empInfo={};
 
 function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
 function showNotif(id,msg,type){const el=document.getElementById(id);el.textContent=msg;el.className='notif show '+type;setTimeout(()=>el.className='notif',4000);}
@@ -401,8 +401,10 @@ function goQ(){
   const dept=document.getElementById('e-dept').value;
   if(!name||!dept){showNotif('n-info','Ism va bo\'limni kiriting.','err');return;}
   empInfo={name,dept,role:document.getElementById('e-role').value,exp:document.getElementById('e-exp').value};
-  curQ=0;ans={};renderQ();go('s-q');
+  curQ=0;ans={};ansOrder={};renderQ();go('s-q');
 }
+
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
 
 function renderQ(){
   const q=Qs[curQ];
@@ -413,15 +415,21 @@ function renderQ(){
   document.getElementById('btn-prev').style.display=curQ===0?'none':'';
   document.getElementById('btn-next').textContent=curQ===Qs.length-1?'Yakunlash ✓':'Keyingi →';
 
+  // Shuffle opts but keep original index for scoring
+  const shuffled=shuffle(q.opts.map((o,i)=>({...o,origIdx:i})));
+  // Store shuffled order for this question
+  if(!ansOrder[q.id])ansOrder[q.id]=shuffled;
+  const displayOpts=ansOrder[q.id];
+
   let h=`<div class="card">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <span class="lv-badge ${q.lc}">${q.lt} daraja</span>
       <span class="q-num">Savol ${q.id} / 15</span>
     </div>
     <div class="q-text">${q.text}</div>`;
-  q.opts.forEach((o,i)=>{
-    const sel=ans[q.id]===i?'sel':'';
-    h+=`<div class="opt ${sel}" onclick="selS(${q.id},${i},this)"><div class="dot"></div><span class="opt-lbl">${o.l}</span></div>`;
+  displayOpts.forEach((o,i)=>{
+    const sel=ans[q.id]===o.origIdx?'sel':'';
+    h+=`<div class="opt ${sel}" onclick="selS(${q.id},${o.origIdx},this)"><div class="dot"></div><span class="opt-lbl">${o.l}</span></div>`;
   });
   h+='</div>';
   document.getElementById('qarea').innerHTML=h;
