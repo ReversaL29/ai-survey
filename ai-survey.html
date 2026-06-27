@@ -1,79 +1,70 @@
 <!DOCTYPE html>
-<html lang="uz">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- saved from url=(0053)file:///C:/Users/Sanjar/Downloads/ai-survey-v4_4.html -->
+<html lang="uz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Ko'nikma Tahlili</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f3;color:#0b0b0b;min-height:100vh}
-.wrap{max-width:560px;margin:0 auto;padding:24px 16px}
+.wrap{max-width:580px;margin:0 auto;padding:24px 16px}
 .screen{display:none}.screen.active{display:block}
-.logo{text-align:center;padding:2rem 1rem 0}
-.logo-icon{width:56px;height:56px;border-radius:14px;background:#e6f1fb;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
-.logo-icon svg{width:28px;height:28px;stroke:#185FA5;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-h1{font-size:22px;font-weight:600;margin-bottom:6px}
+h1{font-size:22px;font-weight:600;margin-bottom:8px}
 .sub{font-size:14px;color:#52514e;line-height:1.6;margin-bottom:1.5rem}
 .card{background:#fff;border:1px solid #e8e7e1;border-radius:14px;padding:20px;margin-bottom:12px}
-.btn{width:100%;padding:13px 20px;border-radius:10px;font-size:15px;font-weight:500;cursor:pointer;border:1px solid #d0cfc8;background:#fff;color:#0b0b0b;transition:all .15s;margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:8px}
-.btn:hover{background:#f5f5f3;border-color:#b0afa8}
-.btn.pri{background:#185FA5;color:#fff;border-color:#185FA5}
-.btn.pri:hover{background:#0c447c}
-.btn.sm{width:auto;padding:9px 18px;font-size:14px}
-.btn.danger{color:#a32d2d;border-color:#f09595}
-.btn.danger:hover{background:#fcebeb}
-.btn-row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.btn{width:100%;padding:13px 20px;border-radius:10px;font-size:15px;font-weight:500;cursor:pointer;border:1px solid #d0cfc8;background:#fff;color:#0b0b0b;transition:all .15s;margin-bottom:8px}
+.btn:hover{background:#f5f5f3}.btn.pri{background:#185FA5;color:#fff;border-color:#185FA5}.btn.pri:hover{background:#0c447c}
+.btn.sm{width:auto;padding:9px 18px;font-size:14px;margin-bottom:0}
+.btn.danger{color:#a32d2d;border-color:#f09595}.btn.danger:hover{background:#fcebeb}
+.btn-row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
 label{display:block;font-size:12px;color:#52514e;margin-bottom:4px;font-weight:500}
 input,select{width:100%;padding:9px 12px;border:1px solid #d0cfc8;border-radius:8px;font-size:14px;background:#fff;color:#0b0b0b;margin-bottom:12px;outline:none}
 input:focus,select:focus{border-color:#185FA5;box-shadow:0 0 0 3px rgba(24,95,165,.1)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .prog-wrap{margin-bottom:20px}
-.prog-lbl{font-size:12px;color:#898781;margin-bottom:6px}
-.prog-bar{height:4px;background:#e8e7e1;border-radius:99px;overflow:hidden}
+.prog-lbl{font-size:12px;color:#898781;margin-bottom:6px;display:flex;justify-content:space-between}
+.prog-bar{height:5px;background:#e8e7e1;border-radius:99px;overflow:hidden}
 .prog-fill{height:100%;background:#185FA5;border-radius:99px;transition:width .4s}
-.q-num{font-size:11px;font-weight:600;color:#185FA5;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
-.q-text{font-size:16px;font-weight:600;color:#0b0b0b;margin-bottom:6px;line-height:1.4}
-.q-cat{font-size:12px;color:#898781;margin-bottom:16px}
-.opt{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid #e8e7e1;border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all .15s;background:#fafaf8}
+.lv-badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;margin-bottom:8px}
+.lv1{background:#eaf3de;color:#3B6D11}
+.lv2{background:#e6f1fb;color:#185FA5}
+.lv3{background:#faeeda;color:#854F0B}
+.lv4{background:#FBEAF0;color:#993556}
+.lv5{background:#fcebeb;color:#A32D2D}
+.q-num{font-size:12px;color:#898781;margin-bottom:6px}
+.q-text{font-size:15px;font-weight:600;color:#0b0b0b;margin-bottom:16px;line-height:1.4}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border:1px solid #e8e7e1;border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all .15s;background:#fafaf8;user-select:none}
 .opt:hover{border-color:#185FA5;background:#e6f1fb}
 .opt.sel{border-color:#185FA5;background:#e6f1fb}
-.dot{width:17px;height:17px;border-radius:50%;border:1.5px solid #d0cfc8;flex-shrink:0;position:relative;background:#fff}
+.dot{width:18px;height:18px;border-radius:50%;border:1.5px solid #d0cfc8;flex-shrink:0;position:relative;background:#fff;margin-top:1px;transition:all .15s}
 .opt.sel .dot{background:#185FA5;border-color:#185FA5}
-.dot::after{content:'';display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:6px;height:6px;border-radius:50%;background:#fff}
+.dot::after{content:'';display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:#fff}
 .opt.sel .dot::after{display:block}
-.chk{width:17px;height:17px;border-radius:4px;border:1.5px solid #d0cfc8;flex-shrink:0;position:relative;background:#fff}
-.opt.sel .chk{background:#185FA5;border-color:#185FA5}
-.chk::after{content:'';display:none;position:absolute;top:2px;left:5px;width:5px;height:9px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(45deg)}
-.opt.sel .chk::after{display:block}
-.opt-lbl{font-size:14px;color:#0b0b0b;flex:1;line-height:1.3}
-.opt-sc{font-size:12px;color:#898781;margin-left:auto;flex-shrink:0}
-.sld-val{font-size:36px;font-weight:600;text-align:center;margin-bottom:10px;color:#185FA5}
-input[type=range]{-webkit-appearance:none;height:6px;border-radius:99px;background:#e8e7e1;padding:0;margin-bottom:8px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#185FA5;cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px #185FA5}
-.sld-lbls{display:flex;justify-content:space-between;font-size:12px;color:#898781}
+.opt-lbl{font-size:14px;color:#0b0b0b;flex:1;line-height:1.4}
 .badge{display:inline-block;font-size:12px;padding:3px 10px;border-radius:99px;font-weight:600}
 .b-leader{background:#e6f1fb;color:#185FA5}
 .b-user{background:#eaf3de;color:#3B6D11}
 .b-beginner{background:#faeeda;color:#854F0B}
 .b-resistant{background:#fcebeb;color:#A32D2D}
-.score-big{font-size:56px;font-weight:700;color:#0b0b0b;text-align:center}
-.score-max{font-size:14px;color:#898781;text-align:center;margin-bottom:16px}
-.seg-lbl{display:block;text-align:center;margin-bottom:8px}
-.seg-lbl .badge{font-size:14px;padding:6px 18px}
-.seg-desc{font-size:14px;color:#52514e;line-height:1.6;text-align:center;margin-bottom:0}
-.bd-title{font-size:13px;font-weight:600;color:#52514e;margin-bottom:12px}
-.bd-row{margin-bottom:12px}
-.bd-row-hd{display:flex;justify-content:space-between;font-size:12px;color:#898781;margin-bottom:4px}
-.bd-bar{height:6px;background:#e8e7e1;border-radius:99px;overflow:hidden}
-.bd-fill{height:100%;background:#185FA5;border-radius:99px}
 .notif{padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:12px;display:none}
 .notif.show{display:block}
 .notif.ok{background:#eaf3de;color:#3B6D11;border:1px solid #c0dd97}
 .notif.err{background:#fcebeb;color:#A32D2D;border:1px solid #f09595}
-.pw-card{max-width:320px;margin:0 auto}
 .pw-err{font-size:12px;color:#a32d2d;margin-bottom:10px;display:none}
 .pw-shake{animation:shake .4s ease}
 @keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e8e7e1}
+.hdr-icon{width:38px;height:38px;border-radius:10px;background:#e6f1fb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.hdr h2{font-size:16px;font-weight:600;color:#0b0b0b}
+.hdr p{font-size:13px;color:#52514e}
+.result-card{text-align:center;padding:28px 20px;border-radius:14px;margin-bottom:12px;border:1px solid transparent}
+.result-icon{font-size:48px;margin-bottom:10px}
+.result-seg-name{font-size:24px;font-weight:700;margin-bottom:8px}
+.result-desc{font-size:14px;line-height:1.6;opacity:.9}
+.bd-row{margin-bottom:14px}
+.bd-row-hd{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+.bd-bar{height:7px;background:#e8e7e1;border-radius:99px;overflow:hidden}
+.bd-fill{height:100%;border-radius:99px;transition:width .8s}
 .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
 .mc{background:#f5f5f3;border-radius:10px;padding:12px 14px}
 .mc-lbl{font-size:12px;color:#898781;margin-bottom:4px}
@@ -88,16 +79,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 .seg-b{height:100%;border-radius:99px;transition:width .6s}
 .etable{width:100%;border-collapse:collapse;font-size:13px}
 .etable th{text-align:left;padding:8px 10px;color:#898781;font-weight:500;border-bottom:1px solid #e8e7e1;font-size:12px}
-.etable td{padding:10px 10px;border-bottom:1px solid #f0efe8;color:#0b0b0b;vertical-align:middle}
+.etable td{padding:10px;border-bottom:1px solid #f0efe8;color:#0b0b0b;vertical-align:middle}
 .etable tr:last-child td{border-bottom:none}
-.dir-item{background:#f5f5f3;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.dir-icon{font-size:18px;width:20px;text-align:center;color:#185FA5}
 .empty{text-align:center;padding:2rem;color:#898781;font-size:14px}
-.loading{text-align:center;padding:2rem;color:#898781;font-size:14px}
-.hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e8e7e1}
-.hdr-icon{width:38px;height:38px;border-radius:10px;background:#e6f1fb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
-.hdr h2{font-size:16px;font-weight:600;color:#0b0b0b}
-.hdr p{font-size:13px;color:#52514e}
+.lv-legend{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
 @media(max-width:480px){.grid2{grid-template-columns:1fr}.metric-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -106,65 +91,53 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 <!-- Bosh sahifa -->
 <div class="screen active" id="s-home">
-  <div class="logo">
-    <div class="logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2"/><path d="M8 12h8M12 8v8"/></svg>
-    </div>
+  <div style="text-align:center;padding:2rem 1rem 1rem">
+    <div style="font-size:48px;margin-bottom:12px">🧠</div>
     <h1>AI ko'nikma tahlili</h1>
-    <p class="sub">Ushbu so'rovnoma xodimlarning AI foydalanish darajasini aniqlash uchun mo'ljallangan. Barcha savollar 3 daqiqa vaqt oladi.</p>
+    <p class="sub">15 ta savol orqali sizning AI foydalanish darajangizni aniqlaymiz. Savollar asta-sekin murakkablashib boradi.</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;text-align:center">
-    <div class="card" style="padding:14px">
-      <div style="font-size:22px;font-weight:700;color:#185FA5">5</div>
-      <div style="font-size:12px;color:#898781">savol</div>
-    </div>
-    <div class="card" style="padding:14px">
-      <div style="font-size:22px;font-weight:700;color:#185FA5">~3</div>
-      <div style="font-size:12px;color:#898781">daqiqa</div>
-    </div>
-    <div class="card" style="padding:14px">
-      <div style="font-size:22px;font-weight:700;color:#185FA5">30</div>
-      <div style="font-size:12px;color:#898781">maks ball</div>
-    </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;text-align:center">
+    <div class="card" style="padding:14px"><div style="font-size:22px;font-weight:700;color:#185FA5">15</div><div style="font-size:12px;color:#898781">savol</div></div>
+    <div class="card" style="padding:14px"><div style="font-size:22px;font-weight:700;color:#185FA5">~7</div><div style="font-size:12px;color:#898781">daqiqa</div></div>
+    <div class="card" style="padding:14px"><div style="font-size:22px;font-weight:700;color:#185FA5">75</div><div style="font-size:12px;color:#898781">maks ball</div></div>
   </div>
-  <button class="btn pri" onclick="go('s-info')">So'rovnomani boshlash →</button>
-  <button class="btn" onclick="go('s-pw')" style="color:#898781;font-size:13px;border-color:#e8e7e1">🔒 Dashboard (menejer)</button>
+  <div class="card" style="padding:14px;margin-bottom:16px">
+    <div style="font-size:12px;font-weight:600;color:#52514e;margin-bottom:8px">Savol darajalari:</div>
+    <div class="lv-legend">
+      <span class="lv-badge lv1">1–3: Oson</span>
+      <span class="lv-badge lv2">4–6: O'rta oson</span>
+      <span class="lv-badge lv3">7–9: O'rta</span>
+      <span class="lv-badge lv4">10–12: Qiyin</span>
+      <span class="lv-badge lv5">13–15: Juda qiyin</span>
+    </div>
+    <div style="font-size:12px;color:#898781;line-height:1.6;margin-top:6px">Har bir savolga o'zingiz to'g'ri deb bilgan javobni bering. To'g'ri yoki noto'g'ri javob yo'q.</div>
+  </div>
+  <button class="btn pri" onclick="go(&#39;s-info&#39;)">So'rovnomani boshlash →</button>
+  <button class="btn" onclick="go(&#39;s-pw&#39;)" style="color:#898781;font-size:13px;border-color:#e8e7e1">🔒 Dashboard</button>
 </div>
 
 <!-- Parol -->
 <div class="screen" id="s-pw">
-  <div class="hdr">
-    <div class="hdr-icon">🔒</div>
-    <div><h2>Menejer kirishi</h2><p>Dashboard uchun parol talab qilinadi</p></div>
-  </div>
-  <div class="pw-card">
+  <div class="hdr"><div class="hdr-icon">🔒</div><div><h2>Menejer kirishi</h2><p>Dashboard uchun parol talab qilinadi</p></div></div>
+  <div style="max-width:320px;margin:0 auto">
     <div class="card" id="pw-card">
-      <label>Parolni kiriting</label>
-      <input type="password" id="pw-input" placeholder="Parol" onkeydown="if(event.key==='Enter')checkPw()"/>
-      <div class="pw-err" id="pw-err">⚠ Noto'g'ri parol. Qayta urinib ko'ring.</div>
+      <label>Parol</label>
+      <input type="password" id="pw-input" placeholder="Parolni kiriting" onkeydown="if(event.key===&#39;Enter&#39;)checkPw()">
+      <div class="pw-err" id="pw-err">⚠ Noto'g'ri parol</div>
       <button class="btn pri" onclick="checkPw()">Kirish →</button>
     </div>
-    <div style="text-align:center;margin-top:12px">
-      <button class="btn sm" onclick="go('s-home')" style="width:auto">← Orqaga</button>
-    </div>
+    <div style="text-align:center;margin-top:12px"><button class="btn sm" onclick="go(&#39;s-home&#39;)">← Orqaga</button></div>
   </div>
 </div>
 
 <!-- Xodim ma'lumotlari -->
 <div class="screen" id="s-info">
-  <div class="hdr">
-    <div class="hdr-icon">👤</div>
-    <div><h2>Xodim ma'lumotlari</h2><p>So'rovnomadan oldin to'ldiring</p></div>
-  </div>
+  <div class="hdr"><div class="hdr-icon">👤</div><div><h2>Ma'lumotlaringiz</h2><p>So'rovnomadan oldin to'ldiring</p></div></div>
   <div class="notif" id="n-info"></div>
   <div class="card">
     <div class="grid2">
-      <div>
-        <label>Ism va familiya *</label>
-        <input type="text" id="e-name" placeholder="Aziz Karimov"/>
-      </div>
-      <div>
-        <label>Bo'lim *</label>
+      <div><label>Ism va familiya *</label><input type="text" id="e-name" placeholder="Aziz Karimov"></div>
+      <div><label>Bo'lim *</label>
         <select id="e-dept">
           <option value="">Tanlang...</option>
           <option>Sotuv</option><option>Marketing</option><option>Moliya</option>
@@ -173,12 +146,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
       </div>
     </div>
     <div class="grid2">
-      <div>
-        <label>Lavozim</label>
-        <input type="text" id="e-role" placeholder="Menejer"/>
-      </div>
-      <div>
-        <label>Ish staji</label>
+      <div><label>Lavozim</label><input type="text" id="e-role" placeholder="Menejer"></div>
+      <div><label>Ish staji</label>
         <select id="e-exp">
           <option value="">Tanlang...</option>
           <option>1 yildan kam</option><option>1-3 yil</option>
@@ -188,20 +157,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     </div>
   </div>
   <div class="btn-row">
-    <button class="btn sm" onclick="go('s-home')">← Orqaga</button>
+    <button class="btn sm" onclick="go(&#39;s-home&#39;)">← Orqaga</button>
     <button class="btn sm pri" onclick="goQ()">Davom etish →</button>
   </div>
 </div>
 
 <!-- Savollar -->
 <div class="screen" id="s-q">
-  <div class="hdr">
-    <div class="hdr-icon">📋</div>
-    <div><h2 id="qhdr">Savol 1 / 5</h2><p id="qcat"></p></div>
-  </div>
   <div class="prog-wrap">
-    <div class="prog-lbl" id="plbl">20% bajarildi</div>
-    <div class="prog-bar"><div class="prog-fill" id="pfill" style="width:20%"></div></div>
+    <div class="prog-lbl"><span id="plbl">Savol 1 / 15</span><span id="ppct">7%</span></div>
+    <div class="prog-bar"><div class="prog-fill" id="pfill" style="width:7%"></div></div>
   </div>
   <div id="qarea"></div>
   <div class="btn-row">
@@ -212,42 +177,27 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 <!-- Natija -->
 <div class="screen" id="s-result">
-  <div class="hdr">
-    <div class="hdr-icon">🏆</div>
-    <div><h2>Natija</h2><p id="res-name"></p></div>
-  </div>
+  <div class="hdr"><div class="hdr-icon">🏆</div><div><h2>Sizning natijangiz</h2><p id="res-name"></p></div></div>
   <div class="notif" id="n-save"></div>
-  <div class="card" style="text-align:center;padding:24px">
-    <div class="score-big" id="res-score"></div>
-    <div class="score-max">/ 30 ball</div>
-    <span class="seg-lbl"><span id="res-badge" class="badge"></span></span>
-    <p class="seg-desc" id="res-desc"></p>
-  </div>
+  <div id="res-seg-card" class="result-card"></div>
   <div class="card" id="res-bd"></div>
-  <button class="btn pri" onclick="go('s-home')">🏠 Bosh sahifa</button>
+  <button class="btn pri" onclick="go(&#39;s-home&#39;)" style="margin-top:4px">🏠 Bosh sahifa</button>
 </div>
 
 <!-- Dashboard -->
 <div class="screen" id="s-dash">
-  <div class="hdr">
-    <div class="hdr-icon">📊</div>
-    <div><h2>Menejer dashboard</h2><p id="dash-sub">Yuklanmoqda...</p></div>
-  </div>
+  <div class="hdr"><div class="hdr-icon">📊</div><div><h2>Menejer dashboard</h2><p id="dash-sub">Yuklanmoqda...</p></div></div>
   <div class="notif" id="n-dash"></div>
-  <div id="dash-load" class="loading">⏳ Ma'lumotlar yuklanmoqda...</div>
+  <div id="dash-load" style="text-align:center;padding:2rem;color:#898781">⏳ Yuklanmoqda...</div>
   <div id="dash-body" style="display:none">
     <div class="metric-grid" id="metrics"></div>
     <div class="tab-row">
-      <button class="tab active" onclick="showTab('t-seg',this)">Segmentlar</button>
-      <button class="tab" onclick="showTab('t-dir',this)">Yo'nalishlar</button>
-      <button class="tab" onclick="showTab('t-emp',this)">Xodimlar</button>
+      <button class="tab active" onclick="showTab(&#39;t-seg&#39;,this)">Segmentlar</button>
+      <button class="tab" onclick="showTab(&#39;t-bo&#39;,this)">Bo'limlar</button>
+      <button class="tab" onclick="showTab(&#39;t-emp&#39;,this)">Xodimlar</button>
     </div>
-    <div id="t-seg">
-      <div class="card"><div class="bd-title">Xodim segmentatsiyasi</div><div id="seg-bars"></div></div>
-    </div>
-    <div id="t-dir" style="display:none">
-      <div class="card"><div class="bd-title">AI qaysi yo'nalishlarda ishlatilmoqda</div><div id="dir-grid"></div></div>
-    </div>
+    <div id="t-seg"><div class="card"><div style="font-size:13px;font-weight:600;color:#52514e;margin-bottom:14px">Xodim segmentatsiyasi</div><div id="seg-bars"></div></div></div>
+    <div id="t-bo" style="display:none"><div class="card"><div style="font-size:13px;font-weight:600;color:#52514e;margin-bottom:14px">Bo'limlar bo'yicha o'rtacha ball</div><div id="dept-bars"></div></div></div>
     <div id="t-emp" style="display:none">
       <div class="card" style="padding:0;overflow:hidden">
         <table class="etable">
@@ -256,235 +206,332 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
         </table>
       </div>
     </div>
-    <div class="btn-row" style="margin-top:16px;flex-wrap:wrap">
+    <div class="btn-row" style="margin-top:16px">
       <button class="btn sm" onclick="loadDash()">🔄 Yangilash</button>
       <button class="btn sm danger" onclick="clearAll()">🗑 Tozalash</button>
-      <button class="btn sm" onclick="go('s-home')">← Chiqish</button>
+      <button class="btn sm" onclick="go(&#39;s-home&#39;)">← Chiqish</button>
     </div>
   </div>
 </div>
 
 </div>
-
 <script>
-const SUPABASE_URL = 'https://znchfdtwzurnvkbcnvqj.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_IUbLuLBUtGbxkZRfoAsLBg_6vXdPlBv';
-const PASS = 'Aa123123';
+const SUPABASE_URL='https://znchfdtwzurnvkbcnvqj.supabase.co';
+const SUPABASE_KEY='sb_publishable_IUbLuLBUtGbxkZRfoAsLBg_6vXdPlBv';
+const PASS='Aa123123';
 
-const Qs = [
-  {id:1,text:"Kundalik hayotingizda AI vositalaridan qanchalik foydalanasiz?",cat:"AI foydalanish chastotasi",type:"single",opts:[
-    {l:"Har kuni bir necha marta foydalanaman",s:5},
-    {l:"Har kuni kamida 1 marta foydalanaman",s:4},
-    {l:"Haftada bir necha marta foydalanaman",s:3},
-    {l:"Ba'zida foydalanaman",s:2},
-    {l:"Umuman foydalanmayman",s:1}
-  ]},
-  {id:2,text:"Ish faoliyatingizda AI'dan qaysi vazifalarda foydalanasiz?",cat:"AI ishlatilayotgan yo'nalishlar",type:"multi",opts:[
-    {l:"Matn yozish / tahrirlash",d:"matn"},
-    {l:"G'oya va kreativ topish",d:"kontent"},
-    {l:"Mijozlar bilan ishlash / sotuv",d:"sotuv"},
-    {l:"Hisobot va analiz qilish",d:"analitika"},
-    {l:"Rasm/video/kontent yaratish",d:"kontent"},
-    {l:"Yangi bilim olish",d:"talim"},
-    {l:"Umuman foydalanmayman",d:null}
-  ]},
-  {id:3,text:"Agar AI bo'lmaganida, hozirgi ishlaringiz qanchalik qiyinlashardi?",cat:"AI samaradorlik ta'siri",type:"single",opts:[
-    {l:"Juda ko'p vaqt yo'qotardim",s:5},
-    {l:"Ba'zi ishlar sekinlashardi",s:4},
-    {l:"Farqi katta bo'lmasdi",s:3},
-    {l:"AI menga hali yordam bermaydi",s:1}
-  ]},
-  {id:4,text:"AI'dan foydalanish bo'yicha o'z bilim darajangizni baholang",cat:"AI kompetensiya darajasi",type:"slider",min:1,max:10},
-  {id:5,text:"Kompaniya AI bo'yicha trening qilsa, qatnashishga tayyormisiz?",cat:"AI rivojlanishga tayyorlik",type:"single",opts:[
-    {l:"Ha, faol o'rganaman va ishda qo'llayman",s:5},
-    {l:"O'rganib ko'raman",s:4},
-    {l:"Kerak bo'lsa foydalanaman",s:3},
-    {l:"Qiziq emas",s:1}
-  ]}
+const Qs=[
+  /* ===== DARAJA 1: OSON ===== */
+  {id:1,lv:1,lc:'lv1',lt:'Oson',
+   text:"AI vositalari (ChatGPT, Claude, Gemini va boshqalar) haqida qanchalik bilasiz?",
+   opts:[
+     {l:"Nomini ham eshitmagan edim",s:1},
+     {l:"Nomini eshitganman, lekin ishlatmaganman",s:2},
+     {l:"Bir-ikki marta sinab ko'rganman",s:3},
+     {l:"Yaxshi bilaman va tushunaman",s:4},
+     {l:"Juda yaxshi bilaman, boshqalarga ham tushuntira olaman",s:5}
+   ]},
+  {id:2,lv:1,lc:'lv1',lt:'Oson',
+   text:"Oxirgi bir oy ichida AI vositalaridan necha marta foydalandingiz?",
+   opts:[
+     {l:"Umuman foydalanmadim",s:1},
+     {l:"1-2 marta",s:2},
+     {l:"Haftada bir necha marta",s:3},
+     {l:"Har kuni kamida 1 marta",s:4},
+     {l:"Har kuni bir necha marta",s:5}
+   ]},
+  {id:3,lv:1,lc:'lv1',lt:'Oson',
+   text:"AI yordamida qanday oddiy vazifalarni bajarasiz?",
+   opts:[
+     {l:"Hech qanday vazifa bajarmayman",s:1},
+     {l:"Faqat tarjima yoki qidiruv",s:2},
+     {l:"Matn yozish yoki tahrirlash",s:3},
+     {l:"Bir nechta vazifa: matn, g'oya, savol-javob",s:4},
+     {l:"Ko'p vazifalar: matn, tahlil, kontent, rejalashtirish",s:5}
+   ]},
+
+  /* ===== DARAJA 2: O'RTA OSON ===== */
+  {id:4,lv:2,lc:'lv2',lt:"O'rta oson",
+   text:"Ish vazifangizda AI dan qanchalik foydalanasiz?",
+   opts:[
+     {l:"Ishda umuman foydalanmayman",s:1},
+     {l:"Ba'zida sinab ko'raman, lekin foydasi yo'q",s:2},
+     {l:"Ayrim vazifalar uchun foydalanarli",s:3},
+     {l:"Ko'p ish vazifalarida muntazam foydalanaman",s:4},
+     {l:"AI mening asosiy ish vositalarimdan biri",s:5}
+   ]},
+  {id:5,lv:2,lc:'lv2',lt:"O'rta oson",
+   text:"AI ishlatganda qanday natija olasiz?",
+   opts:[
+     {l:"Hech ishlatmaganman",s:1},
+     {l:"Ko'pincha natija yomon yoki noaniq bo'ladi",s:2},
+     {l:"Ba'zida yaxshi, ba'zida yomon natija",s:3},
+     {l:"Ko'pincha yaxshi natija olaman",s:4},
+     {l:"Deyarli har doim kerakli natijani olaman",s:5}
+   ]},
+  {id:6,lv:2,lc:'lv2',lt:"O'rta oson",
+   text:"AI bergan javobni qanday tekshirasiz?",
+   opts:[
+     {l:"Tekshirmayman, ishlatmayman",s:1},
+     {l:"Tekshirmayman, to'g'ri deb qabul qilaman",s:2},
+     {l:"Ba'zida tekshiraman, ba'zida yo'q",s:3},
+     {l:"Har doim tekshirib, kerak bo'lsa tuzataman",s:4},
+     {l:"Har doim tanqidiy ko'z bilan baholaymen va xatolarni topaman",s:5}
+   ]},
+
+  /* ===== DARAJA 3: O'RTA ===== */
+  {id:7,lv:3,lc:'lv3',lt:"O'rta",
+   text:"AI ga yaxshiroq javob olish uchun so'rovingizni (prompt) qanday yozasiz?",
+   opts:[
+     {l:"Qanday yozishni bilmayman",s:1},
+     {l:"Oddiy savol yozaman, natija qanday chiqsa shunday",s:2},
+     {l:"Aniqroq yozishga harakat qilaman",s:3},
+     {l:"Kontekst, misol va aniq ko'rsatma berib yozaman",s:4},
+     {l:"Murakkab promptlar yozaman: rol, format, misol, cheklov bilan",s:5}
+   ]},
+  {id:8,lv:3,lc:'lv3',lt:"O'rta",
+   text:"AI noto'g'ri yoki yomon javob berganda nima qilasiz?",
+   opts:[
+     {l:"Bunday bo'lganida ishlatishni to'xtataman",s:1},
+     {l:"Boshqa vositaga o'taman",s:2},
+     {l:"Qayta so'rayman, lekin bir xil tarzda",s:3},
+     {l:"So'rovni o'zgartirib, aniqlashtiraman",s:4},
+     {l:"Muammoni tahlil qilib, butunlay boshqacha yondashuv sinab ko'raman",s:5}
+   ]},
+  {id:9,lv:3,lc:'lv3',lt:"O'rta",
+   text:"Qaysi ish vazifalari uchun AI mos emas deb o'ylaysiz?",
+   opts:[
+     {l:"Bilmayman, hech o'ylamagan edim",s:1},
+     {l:"AI hamma narsaga mos deb o'ylayman",s:2},
+     {l:"Maxfiy ma'lumotlar uchun mos emas deb bilaman",s:3},
+     {l:"Bir necha aniq holatlarni bilib, ularda ishlatmayman",s:4},
+     {l:"AI cheklovlarini yaxshi bilaman va har bir vazifa uchun to'g'ri qaror qabul qilaman",s:5}
+   ]},
+
+  /* ===== DARAJA 4: QIYIN ===== */
+  {id:10,lv:4,lc:'lv4',lt:'Qiyin',
+   text:"AI yordamida ish jarayonlarini qanchalik avtomatlashtirgansiz?",
+   opts:[
+     {l:"Hech avtomatlashtirmaganman",s:1},
+     {l:"Faqat alohida kichik vazifalar uchun",s:2},
+     {l:"Bir nechta oddiy jarayonlarni AI bilan tezlashtirganman",s:3},
+     {l:"Bir nechta ish jarayonini sezilarli darajada optimallashtiganman",s:4},
+     {l:"Bir nechta katta jarayonni AI bilan to'liq yoki qisman avtomatlashtiganman",s:5}
+   ]},
+  {id:11,lv:4,lc:'lv4',lt:'Qiyin',
+   text:"Bir nechta AI vositasini birgalikda ishlatganmisiz?",
+   opts:[
+     {l:"Yo'q, faqat bitta ham ishlatmaganman",s:1},
+     {l:"Faqat bitta AI vositasini bilaman",s:2},
+     {l:"Ikki xil AI ishlatganman, lekin alohida-alohida",s:3},
+     {l:"Ikki-uchta AI ni bir vazifa uchun birgalikda ishlatganman",s:4},
+     {l:"Bir nechta AI vositasini muntazam kombinatsiyada ishlataman",s:5}
+   ]},
+  {id:12,lv:4,lc:'lv4',lt:'Qiyin',
+   text:"AI tahlili asosida muhim biznes qaror qabul qilganmisiz?",
+   opts:[
+     {l:"Yo'q, AI bilan ish qarorlarini bog'lamagan edim",s:1},
+     {l:"Kichik qarorlar uchun ma'lumot oldim",s:2},
+     {l:"AI ma'lumotlarini hisobga olib, ba'zi qarorlar qabul qilganman",s:3},
+     {l:"Bir nechta muhim qarorlarda AI tahlilidan foydalanganman",s:4},
+     {l:"AI tahlili mening qaror qabul qilish jarayonimning ajralmas qismiga aylangan",s:5}
+   ]},
+
+  /* ===== DARAJA 5: JUDA QIYIN ===== */
+  {id:13,lv:5,lc:'lv5',lt:'Juda qiyin',
+   text:"Hamkasblaringizga AI qo'llashni o'rgatganmisiz?",
+   opts:[
+     {l:"Yo'q, o'zim ham yetarli bilmayman",s:1},
+     {l:"Bir-ikki marta ko'rsatganman, biroq rasmiy emas",s:2},
+     {l:"Bir nechta hamkasbimga yordam berganman",s:3},
+     {l:"Jamoamda AI foydalanishni oshirishga faol hissa qo'shganman",s:4},
+     {l:"Kompaniyada AI o'qitish, trening yoki yo'riqnoma yaratganman",s:5}
+   ]},
+  {id:14,lv:5,lc:'lv5',lt:'Juda qiyin',
+   text:"AI yordamida yangi g'oya, mahsulot yoki jarayon yaratganmisiz?",
+   opts:[
+     {l:"Yo'q, faqat tayyor narsalarni ishlataman",s:1},
+     {l:"Kichik g'oyalar uchun foydalanganman",s:2},
+     {l:"AI yordamida bir-ikki yangi g'oya ishlab chiqqanman",s:3},
+     {l:"AI yordamida yangi jarayon yoki yechim yaratganman",s:4},
+     {l:"AI yordamida kompaniya uchun yangi mahsulot, xizmat yoki tizim yaratganman",s:5}
+   ]},
+  {id:15,lv:5,lc:'lv5',lt:'Juda qiyin',
+   text:"AI strategiyasi va kelajagi haqida qanday tasavvuringiz bor?",
+   opts:[
+     {l:"Bu haqda o'ylamaganman",s:1},
+     {l:"Umumiy bilaman, lekin sohama qanday ta'sir qilishini bilmayman",s:2},
+     {l:"Sohama ta'sirini o'ylab ko'rganman",s:3},
+     {l:"Kompaniyamizda AI qo'llash bo'yicha aniq fikrlarim bor",s:4},
+     {l:"Kompaniyamiz uchun AI strategiyasini ishlab chiqishga tayyorman yoki allaqachon boshlaganman",s:5}
+   ]}
 ];
 
-let curQ=0, ans={}, empInfo={}, slVal=5;
+const SEG_COLORS={
+  'AI Leader':{bg:'#e6f1fb',color:'#185FA5',icon:'🚀'},
+  'AI User':{bg:'#eaf3de',color:'#3B6D11',icon:'✅'},
+  'AI Beginner':{bg:'#faeeda',color:'#854F0B',icon:'📈'},
+  'AI Resistant':{bg:'#fcebeb',color:'#A32D2D',icon:'🌱'}
+};
 
-function go(id) {
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0,0);
-}
+const SEG_DESC={
+  'AI Leader':"AI'dan juda faol va samarali foydalanasiz. Boshqalarga yo'l ko'rsata olasiz va kompaniyada AI madaniyatini rivojlantirishga hissa qo'sha olasiz.",
+  'AI User':"AI vositalarini ishlatishni bilasiz va amaliyotda qo'llayapsiz. Yanada chuqur ko'nikma orttirish uchun ilg'or treninglar tavsiya etiladi.",
+  'AI Beginner':"AI bilan tanishsiz, lekin amaliy tajribangiz hali cheklangan. Asosiy trening dasturiga qatnashish sizga katta imkoniyat ochadi.",
+  'AI Resistant':"AI vositalaridan hozircha kam yoki umuman foydalanmayapsiz. Alohida motivatsion yondashuv va bosqichma-bosqich o'qitish tavsiya etiladi."
+};
 
-function showNotif(id,msg,type) {
-  const el=document.getElementById(id);
-  el.textContent=msg; el.className='notif show '+(type==='ok'?'ok':'err');
-  setTimeout(()=>el.className='notif',4000);
-}
+let curQ=0,ans={},empInfo={};
 
-function checkPw() {
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function showNotif(id,msg,type){const el=document.getElementById(id);el.textContent=msg;el.className='notif show '+type;setTimeout(()=>el.className='notif',4000);}
+
+function checkPw(){
   const v=document.getElementById('pw-input').value;
-  const err=document.getElementById('pw-err');
-  const card=document.getElementById('pw-card');
-  if(v===PASS) {
-    document.getElementById('pw-input').value='';
-    err.style.display='none';
-    go('s-dash'); loadDash();
-  } else {
-    err.style.display='block';
-    card.classList.remove('pw-shake');
-    void card.offsetWidth;
-    card.classList.add('pw-shake');
-    document.getElementById('pw-input').value='';
-    document.getElementById('pw-input').focus();
+  if(v===PASS){document.getElementById('pw-input').value='';document.getElementById('pw-err').style.display='none';go('s-dash');loadDash();}
+  else{
+    document.getElementById('pw-err').style.display='block';
+    const c=document.getElementById('pw-card');c.classList.remove('pw-shake');void c.offsetWidth;c.classList.add('pw-shake');
+    document.getElementById('pw-input').value='';document.getElementById('pw-input').focus();
   }
 }
 
-function goQ() {
+function goQ(){
   const name=document.getElementById('e-name').value.trim();
   const dept=document.getElementById('e-dept').value;
   if(!name||!dept){showNotif('n-info','Ism va bo\'limni kiriting.','err');return;}
   empInfo={name,dept,role:document.getElementById('e-role').value,exp:document.getElementById('e-exp').value};
-  curQ=0; ans={}; slVal=5; renderQ(); go('s-q');
+  curQ=0;ans={};renderQ();go('s-q');
 }
 
-function renderQ() {
+function renderQ(){
   const q=Qs[curQ];
-  document.getElementById('qhdr').textContent=`Savol ${curQ+1} / ${Qs.length}`;
-  document.getElementById('qcat').textContent=q.cat;
   const pct=Math.round(((curQ+1)/Qs.length)*100);
   document.getElementById('pfill').style.width=pct+'%';
-  document.getElementById('plbl').textContent=pct+'% bajarildi';
+  document.getElementById('plbl').textContent=`Savol ${curQ+1} / ${Qs.length}`;
+  document.getElementById('ppct').textContent=pct+'%';
   document.getElementById('btn-prev').style.display=curQ===0?'none':'';
   document.getElementById('btn-next').textContent=curQ===Qs.length-1?'Yakunlash ✓':'Keyingi →';
 
-  let h=`<div class="card"><div class="q-num">Savol ${curQ+1}</div><div class="q-text">${q.text}</div><div class="q-cat">📌 ${q.cat}</div>`;
-  if(q.type==='single') {
-    q.opts.forEach((o,i)=>{
-      const s=ans[q.id]===i?'sel':'';
-      h+=`<div class="opt ${s}" onclick="selS(${q.id},${i},this)"><div class="dot"></div><span class="opt-lbl">${o.l}</span><span class="opt-sc">${o.s} ball</span></div>`;
-    });
-  } else if(q.type==='multi') {
-    const sel=ans[q.id]||[];
-    q.opts.forEach((o,i)=>{
-      const s=sel.includes(i)?'sel':'';
-      h+=`<div class="opt ${s}" onclick="togM(${q.id},${i},this)"><div class="chk"></div><span class="opt-lbl">${o.l}</span></div>`;
-    });
-  } else {
-    const v=ans[q.id]!==undefined?ans[q.id]:5; slVal=v;
-    h+=`<div style="padding:8px 0"><div class="sld-val" id="sdsp">${v}</div>
-    <input type="range" min="1" max="10" value="${v}" step="1" style="width:100%;border:none;margin-bottom:8px" oninput="updS(${q.id},this.value)"/>
-    <div class="sld-lbls"><span>Yangi boshlovchi (1)</span><span>Ekspert (10)</span></div></div>`;
-  }
+  let h=`<div class="card">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <span class="lv-badge ${q.lc}">${q.lt} daraja</span>
+      <span class="q-num">Savol ${q.id} / 15</span>
+    </div>
+    <div class="q-text">${q.text}</div>`;
+  q.opts.forEach((o,i)=>{
+    const sel=ans[q.id]===i?'sel':'';
+    h+=`<div class="opt ${sel}" onclick="selS(${q.id},${i},this)"><div class="dot"></div><span class="opt-lbl">${o.l}</span></div>`;
+  });
   h+='</div>';
   document.getElementById('qarea').innerHTML=h;
 }
 
-function selS(qid,idx,el) {
-  ans[qid]=idx;
-  document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
-  el.classList.add('sel');
-}
-function togM(qid,idx,el) {
-  if(!ans[qid])ans[qid]=[];
-  const p=ans[qid].indexOf(idx);
-  if(p===-1){ans[qid].push(idx);el.classList.add('sel');}
-  else{ans[qid].splice(p,1);el.classList.remove('sel');}
-}
-function updS(qid,v) { slVal=parseInt(v); ans[qid]=slVal; document.getElementById('sdsp').textContent=v; }
-function prevQ() { if(curQ>0){curQ--;renderQ();} }
-function nextQ() {
-  const q=Qs[curQ];
-  if(q.type==='single'&&ans[q.id]===undefined){alert('Iltimos javobni tanlang.');return;}
-  if(q.type==='slider'&&ans[q.id]===undefined)ans[q.id]=slVal;
-  if(curQ===Qs.length-1)finish();
-  else{curQ++;renderQ();}
+function selS(qid,idx,el){ans[qid]=idx;document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel');}
+function prevQ(){if(curQ>0){curQ--;renderQ();}}
+function nextQ(){
+  if(ans[Qs[curQ].id]===undefined){
+    const opts=document.querySelectorAll('.opt');
+    opts.forEach(o=>{o.style.borderColor='#e24b4a';setTimeout(()=>o.style.borderColor='',1500);});
+    return;
+  }
+  if(curQ===Qs.length-1)finish();else{curQ++;renderQ();}
 }
 
-function calcScore() {
-  let s=0;
-  if(ans[1]!==undefined)s+=Qs[0].opts[ans[1]].s;
-  if(ans[3]!==undefined)s+=Qs[2].opts[ans[3]].s;
-  if(ans[4]!==undefined)s+=ans[4];
-  if(ans[5]!==undefined)s+=Qs[4].opts[ans[5]].s;
-  return s;
+function calcScores(){
+  const byLv={1:0,2:0,3:0,4:0,5:0};
+  Qs.forEach(q=>{if(ans[q.id]!==undefined)byLv[q.lv]+=q.opts[ans[q.id]].s;});
+  const total=Object.values(byLv).reduce((a,b)=>a+b,0);
+  return{total,byLv};
 }
 
-function getSeg(sc) {
-  if(sc>=25)return{label:'AI Leader',cls:'b-leader',desc:"AI'dan faol foydalanadi va boshqalarga o'rgata oladi. Kompaniyada AI madaniyatini yaratishda etakchi rol o'ynashi mumkin."};
-  if(sc>=18)return{label:'AI User',cls:'b-user',desc:"AI'dan foydalanadi, lekin bilimini yanada rivojlantirish kerak. Ilg'or trening tavsiya etiladi."};
-  if(sc>=10)return{label:'AI Beginner',cls:'b-beginner',desc:"AI'ga qiziqish bor, lekin tajriba yetarli emas. Asosiy trening dasturiga jalb qilish kerak."};
-  return{label:'AI Resistant',cls:'b-resistant',desc:"AI'dan foydalanmaydi. Alohida motivatsion yondashuv va asosiy ko'nikma o'qitish kerak."};
+function getSeg(total){
+  if(total>=60)return'AI Leader';
+  if(total>=45)return'AI User';
+  if(total>=30)return'AI Beginner';
+  return'AI Resistant';
 }
 
-async function finish() {
-  const score=calcScore();
-  const seg=getSeg(score);
-  const dirs={kontent:0,sotuv:0,analitika:0,matn:0,talim:0};
-  (ans[2]||[]).forEach(i=>{const d=Qs[1].opts[i].d;if(d&&dirs[d]!==undefined)dirs[d]++;});
+function lvLabel(pct){
+  if(pct>=80)return{t:'Yuqori',c:'#3B6D11'};
+  if(pct>=60)return{t:'O\'rta yuqori',c:'#185FA5'};
+  if(pct>=40)return{t:'O\'rta',c:'#854F0B'};
+  if(pct>=20)return{t:'Past',c:'#993556'};
+  return{t:'Juda past',c:'#A32D2D'};
+}
+
+function lvBarColor(lv){return['','#1baf7a','#2a78d6','#eda100','#e87ba4','#e24b4a'][lv];}
+
+async function finish(){
+  const {total,byLv}=calcScores();
+  const seg=getSeg(total);
+  const sc=SEG_COLORS[seg];
 
   document.getElementById('res-name').textContent=empInfo.name;
-  document.getElementById('res-score').textContent=score;
-  const badge=document.getElementById('res-badge');
-  badge.textContent=seg.label; badge.className='badge '+seg.cls;
-  document.getElementById('res-desc').textContent=seg.desc;
 
-  const sc2=[
-    {l:"Foydalanish chastotasi",v:ans[1]!==undefined?Qs[0].opts[ans[1]].s:0,max:5},
-    {l:"Samaradorlik ta'siri",v:ans[3]!==undefined?Qs[2].opts[ans[3]].s:0,max:5},
-    {l:"Kompetensiya darajasi",v:ans[4]||0,max:10},
-    {l:"Rivojlanishga tayyorlik",v:ans[5]!==undefined?Qs[4].opts[ans[5]].s:0,max:5}
-  ];
-  let bd='<div class="bd-title">Ball taqsimoti</div>';
-  sc2.forEach(s=>{
-    const pct=Math.round((s.v/s.max)*100);
-    bd+=`<div class="bd-row"><div class="bd-row-hd"><span>${s.l}</span><span>${s.v}/${s.max}</span></div><div class="bd-bar"><div class="bd-fill" style="width:${pct}%"></div></div></div>`;
-  });
+  const segCard=document.getElementById('res-seg-card');
+  segCard.style.background=sc.bg;
+  segCard.style.borderColor='transparent';
+  segCard.innerHTML=`<div class="result-icon">${sc.icon}</div>
+    <div class="result-seg-name" style="color:${sc.color}">${seg}</div>
+    <div class="result-desc" style="color:${sc.color}">${SEG_DESC[seg]}</div>`;
+
+  const lvNames={1:'Oson savollar',2:"O'rta oson savollar",3:"O'rta savollar",4:'Qiyin savollar',5:'Juda qiyin savollar'};
+  let bd='<div style="font-size:13px;font-weight:600;color:#52514e;margin-bottom:14px">Daraja bo\'yicha natija</div>';
+  for(let lv=1;lv<=5;lv++){
+    const pct=Math.round((byLv[lv]/15)*100);
+    const ll=lvLabel(pct);
+    bd+=`<div class="bd-row">
+      <div class="bd-row-hd"><span style="color:#52514e">${lvNames[lv]}</span><span style="color:${ll.c};font-weight:600">${ll.t}</span></div>
+      <div class="bd-bar"><div class="bd-fill" style="width:${pct}%;background:${lvBarColor(lv)}"></div></div>
+    </div>`;
+  }
   document.getElementById('res-bd').innerHTML=bd;
-  go('s-result');
 
-  try {
+  try{
     const res=await fetch(`${SUPABASE_URL}/rest/v1/responses`,{
       method:'POST',
       headers:{'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Prefer':'return=minimal'},
-      body:JSON.stringify({name:empInfo.name,dept:empInfo.dept,role:empInfo.role,exp:empInfo.exp,score,segment:seg.label,dirs})
+      body:JSON.stringify({name:empInfo.name,dept:empInfo.dept,role:empInfo.role,exp:empInfo.exp,score:total,segment:seg,dirs:byLv})
     });
     if(res.ok)showNotif('n-save','Natijangiz saqlandi!','ok');
     else showNotif('n-save','Saqlashda xato yuz berdi.','err');
-  } catch(e) {
-    showNotif('n-save','Internet aloqasini tekshiring.','err');
-  }
+  }catch(e){showNotif('n-save','Internet aloqasini tekshiring.','err');}
+  go('s-result');
 }
 
-async function loadDash() {
+async function loadDash(){
   document.getElementById('dash-load').style.display='block';
   document.getElementById('dash-body').style.display='none';
-  try {
+  try{
     const res=await fetch(`${SUPABASE_URL}/rest/v1/responses?select=*&order=created_at.desc`,{
       headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
     });
     const emps=await res.json();
     renderDash(emps);
     document.getElementById('dash-sub').textContent=`${emps.length} xodim baholandi`;
-  } catch(e) {
-    document.getElementById('dash-load').textContent='❌ Ma\'lumot yuklanmadi. Internet aloqasini tekshiring.';
-  }
+  }catch(e){document.getElementById('dash-load').textContent='❌ Yuklanmadi.';}
 }
 
-function renderDash(emps) {
+function renderDash(emps){
   document.getElementById('dash-load').style.display='none';
   document.getElementById('dash-body').style.display='block';
   const total=emps.length;
   if(total===0){
     document.getElementById('metrics').innerHTML='<div style="grid-column:1/-1" class="empty">Hali hech qanday xodim so\'rovnomani to\'ldirmagan.</div>';
-    document.getElementById('seg-bars').innerHTML='<div class="empty">Ma\'lumot yo\'q</div>';
+    document.getElementById('seg-bars').innerHTML='';
     document.getElementById('emp-tbody').innerHTML='<tr><td colspan="4" class="empty">Ma\'lumot yo\'q</td></tr>';
     return;
   }
-  const avg=Math.round(emps.reduce((a,e)=>a+e.score,0)/total);
-  const leaders=emps.filter(e=>e.score>=25).length;
-  const users=emps.filter(e=>e.score>=18&&e.score<25).length;
-  const beginners=emps.filter(e=>e.score>=10&&e.score<18).length;
-  const resistant=emps.filter(e=>e.score<10).length;
+  const avg=Math.round(emps.reduce((a,e)=>a+(e.score||0),0)/total);
+  const leaders=emps.filter(e=>e.segment==='AI Leader').length;
+  const users=emps.filter(e=>e.segment==='AI User').length;
+  const beginners=emps.filter(e=>e.segment==='AI Beginner').length;
+  const resistant=emps.filter(e=>e.segment==='AI Resistant').length;
 
   document.getElementById('metrics').innerHTML=`
     <div class="mc"><div class="mc-lbl">Jami xodimlar</div><div class="mc-val">${total}</div><div class="mc-sub">So'rovnomada</div></div>
-    <div class="mc"><div class="mc-lbl">O'rtacha ball</div><div class="mc-val">${avg}</div><div class="mc-sub">/ 30 maks</div></div>
+    <div class="mc"><div class="mc-lbl">O'rtacha ball</div><div class="mc-val">${avg}</div><div class="mc-sub">/ 75 maks</div></div>
     <div class="mc"><div class="mc-lbl">AI Leader</div><div class="mc-val" style="color:#185FA5">${leaders}</div><div class="mc-sub">${Math.round(leaders/total*100)}% ulush</div></div>`;
 
   const segs=[
@@ -500,45 +547,45 @@ function renderDash(emps) {
       <span style="font-size:13px;font-weight:600;min-width:24px;text-align:right">${s.c}</span>
     </div>`).join('');
 
-  const dirs={kontent:0,sotuv:0,analitika:0,matn:0,talim:0};
-  emps.forEach(e=>{if(e.dirs)Object.keys(dirs).forEach(d=>{if(e.dirs[d])dirs[d]+=e.dirs[d];})});
-  const dL={kontent:'Kontent',sotuv:'Sotuv',analitika:'Analitika',matn:'Matn',talim:"Ta'lim"};
-  const dE={kontent:'🎨',sotuv:'💼',analitika:'📈',matn:'📝',talim:'📚'};
-  document.getElementById('dir-grid').innerHTML=Object.keys(dirs).map(d=>`
-    <div class="dir-item">
-      <span class="dir-icon">${dE[d]}</span>
-      <span style="font-size:13px;color:#52514e;flex:1">${dL[d]}</span>
-      <span style="font-size:14px;font-weight:600">${dirs[d]}</span>
-    </div>`).join('');
+  const depts={};
+  emps.forEach(e=>{if(!depts[e.dept]){depts[e.dept]={sum:0,n:0};}depts[e.dept].sum+=(e.score||0);depts[e.dept].n++;});
+  const maxAvg=Math.max(...Object.values(depts).map(d=>Math.round(d.sum/d.n)),1);
+  document.getElementById('dept-bars').innerHTML=Object.entries(depts).sort((a,b)=>(b[1].sum/b[1].n)-(a[1].sum/a[1].n)).map(([dept,d])=>{
+    const a=Math.round(d.sum/d.n);
+    return`<div class="seg-row">
+      <span style="font-size:13px;font-weight:500;min-width:90px">${dept}</span>
+      <div class="seg-bw"><div class="seg-b" style="width:${Math.round(a/maxAvg*100)}%;background:#185FA5"></div></div>
+      <span style="font-size:13px;font-weight:600;min-width:50px;text-align:right">${a} ball</span>
+    </div>`;
+  }).join('');
 
-  document.getElementById('emp-tbody').innerHTML=[...emps].sort((a,b)=>b.score-a.score).map(e=>{
-    const cls=e.score>=25?'b-leader':e.score>=18?'b-user':e.score>=10?'b-beginner':'b-resistant';
+  document.getElementById('emp-tbody').innerHTML=[...emps].sort((a,b)=>(b.score||0)-(a.score||0)).map(e=>{
+    const cls=e.segment==='AI Leader'?'b-leader':e.segment==='AI User'?'b-user':e.segment==='AI Beginner'?'b-beginner':'b-resistant';
     return`<tr>
       <td><strong>${e.name}</strong>${e.role?`<br><span style="color:#898781;font-size:11px">${e.role}</span>`:''}</td>
       <td>${e.dept}</td>
-      <td style="font-weight:600">${e.score}</td>
+      <td style="font-weight:700;color:#185FA5">${e.score||0}</td>
       <td><span class="badge ${cls}">${e.segment}</span></td>
     </tr>`;
   }).join('');
 }
 
-function showTab(id,btn) {
-  ['t-seg','t-dir','t-emp'].forEach(t=>document.getElementById(t).style.display=t===id?'':'none');
+function showTab(id,btn){
+  ['t-seg','t-bo','t-emp'].forEach(t=>document.getElementById(t).style.display=t===id?'':'none');
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
 }
 
-async function clearAll() {
-  if(!confirm('Barcha ma\'lumotlar o\'chiriladi. Davom etasizmi?'))return;
-  try {
-    const res=await fetch(`${SUPABASE_URL}/rest/v1/responses?id=neq.00000000-0000-0000-0000-000000000000`,{
-      method:'DELETE',
-      headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
+async function clearAll(){
+  if(!confirm('Barcha ma\'lumotlar o\'chiriladi!'))return;
+  try{
+    await fetch(`${SUPABASE_URL}/rest/v1/responses?id=neq.00000000-0000-0000-0000-000000000000`,{
+      method:'DELETE',headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
     });
-    if(res.ok){showNotif('n-dash','Barcha ma\'lumotlar o\'chirildi.','ok');loadDash();}
-    else showNotif('n-dash','O\'chirishda xato.','err');
-  } catch(e){showNotif('n-dash','Xato yuz berdi.','err');}
+    showNotif('n-dash','O\'chirildi.','ok');loadDash();
+  }catch(e){showNotif('n-dash','Xato.','err');}
 }
 </script>
-</body>
-</html>
+
+
+</body></html>
